@@ -1,0 +1,79 @@
+{
+  "Data": {
+    "im_w": {
+      "store2.jpg": 1602,
+      "store3.jpg": 2148,
+      "store4.jpg": 1631,
+      "store1.jpg": 2552,
+    },
+    "im_h": {
+      "store2.jpg": 1210,
+      "store3.jpg": 1274,
+      "store4.jpg": 1196,
+      "store1.jpg": 1526,
+    },
+    "patch_num": [
+      47,
+      47
+    ],
+    "patch_size": {
+      "store2.jpg": [
+        34,
+        26
+      ],
+      "store3.jpg": [
+        46,
+        27
+      ],
+      "store4.jpg": [
+        35,
+        25
+      ],
+      "store1.jpg": [
+        54,
+        32
+      ]
+    },
+    "patch_count": 2209,
+    "fovea_radius": 5,
+    "IOR_size": 1,
+    "max_traj_length": 30
+  },
+  "Train": {
+    "gamma": 0.9,
+    "adv_est": "GAE",
+    "exclude_wrong_trials": false,
+    "tau": 0.96,
+    "batch_size": 128,
+    "stop_criteria": "SOT",
+    "load_checkpoints": false,
+    "log_root": "./assets",
+    "num_epoch": 80,
+    "num_step": 1,
+    "real_states_percentual": 0.0,
+    "penalty_wall": 0.01,
+    "checkpoint_every": 30,
+    "max_checkpoints": 5,
+    "evaluate_every": 100,
+    "num_critic": 1,
+    "gail_milestones": [
+      10000
+    ],
+    "gail_lr": 5e-05,
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "bc_lr": 0.001,
+    "bc_iters": 16000
+  },
+  "PPO": {
+    "lr": 1e-05,
+    "clip_param": 0.2,
+    "num_epoch": 10,
+    "batch_size": 64,
+    "value_coef": 1.0,
+    "entropy_coef": 0.1,
+    "wall_penalty": 20.0
+  }
+}
